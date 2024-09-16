@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.class-body {
+    background-color: cornflowerblue;
+}
+
+.contenedor {
+    padding: 0px 100px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    /* display: flex; */
+    background-color: lightyellow;
+    height: 100px;
+}
+
+.contenedor {
+    position:sticky;
+    top: 0;
+}
+
+.titulo-logo {
+
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 48, 0);
+    text-align: center;
+    position: relative;
+    bottom: 110px;
+    ;
+    /* margin: 0px 50px 200px 0; */
+}
+
+.navbar {
+    /*  display: flex; */
+    justify-content: space-between;
+    /* align-items: center; */
+    /* text-align: center;
+     */
+    position: relative;
+    bottom: 100px;
+    padding: 0px 0px 100px 330px;
+
+}
+
+.nav-lista {
+    margin: 0;
+    display: flex;
+}
+
+.nav-lista {
+    align-items: center;
+    font-size: 18px;
+}
+
+.nav-lista a {
+    color: rgb(36, 28, 28);
+    margin: 10px 5px 0px 0px;
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+.boton-menu {
+    padding: 5px;
+    font-size: 17px;
+}
+
+/* Footer */
+
+.footer {
+    color: rgb(9, 9, 19);
+    font-size: .90rem;
+}
+
+/* fin footer */
+
+
+
+main {
+    
+    background-color: white;
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.titulo {
+    color: rgb(57, 57, 233);
+    margin-bottom: 2rem;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.producto-imagen {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.producto-detalles {
+    background-color: rgb(100, 46, 226);
+    color: whitesmoke;
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-top: 0rem;
+    /* position: relative; */
+    
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.titulo-producto {
+    font-size: 1rem;
+}
+
+.agregar-producto {
+    border: 0;
+    background-color: white;
+    color: rgb(136, 1, 136);
+    padding: .25rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.agregar-producto:hover {
+    color: white;
+    background-color: rgb(100, 46, 226);
+    border: 2px solid black;
+}
