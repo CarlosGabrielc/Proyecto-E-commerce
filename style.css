@@ -287,7 +287,9 @@ border-radius: 1rem;
 @media (max-width: 768px) {
     /* Ajustes para dispositivos móviles y tablets */
     .contenedor {
-        padding: 0 20px;
+        padding: 0;
+        
+        width: auto;
         height: 120px;
     }
 
@@ -312,15 +314,15 @@ border-radius: 1rem;
         flex-direction:column;
         font-size: 1rem;
         position: relative;
-        bottom: 27px;
-        left: px;
+        bottom: 30px;
+        left: 15px;
         margin:0;
               
     }
     .chango{
         position:relative;
         bottom: 20px;
-        left: 163px;
+        left: 136px;
     }
 
     .boton-menu {
