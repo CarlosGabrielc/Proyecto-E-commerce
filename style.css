@@ -286,6 +286,7 @@ border-radius: 1rem;
 /* Estilos generales para móviles y tablets */
 @media (max-width: 768px) {
     /* Ajustes para dispositivos móviles y tablets */
+    
     .contenedor {
         padding: 0;
         
