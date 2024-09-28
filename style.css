@@ -261,3 +261,144 @@ border-radius: 1rem;
     color: black;
     text-transform: uppercase;
 }
+
+
+
+
+/* MEDIA QUERYS */
+/* @media screen and (max-width: 600px){
+    .navbar{
+    justify-content: space-between;
+    position: relative;
+    right: 235px;
+   } 
+
+ main{
+    margin: 1rem;
+    padding: 2rem;
+}
+.contenedor-productos{
+    grid-template-columns: 2fr 2fr ;
+}
+} */
+
+
+/* Estilos generales para móviles y tablets */
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móviles y tablets */
+    .contenedor {
+        padding: 0 20px;
+        height: 120px;
+    }
+
+    body header div img{
+        width: 114px;
+    }
+
+    .titulo-logo {
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 125px;
+        margin-left: 100px;
+    }
+
+    .navbar {
+        padding: 0px;
+        /* flex-direction: row;
+        align-items: center; */
+    }
+
+    .nav-lista {
+        flex-direction:column;
+        font-size: 1rem;
+        position: relative;
+        bottom: 27px;
+        left: px;
+        margin:0;
+              
+    }
+    .chango{
+        position:relative;
+        bottom: 20px;
+        left: 185px;
+    }
+
+    .boton-menu {
+        padding: 0;
+        gap: 0.5rem;
+    }
+
+    main {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .producto-detalles {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .agregar-producto {
+        padding: 0.25rem;
+        font-size: 0.85rem;
+    }
+
+    .contenedor-carrito {
+        gap: 1rem;
+    }
+
+    .carrito-producto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carrito-accion {
+        flex-direction: column;
+    }
+
+    .acciones-total, .accion-comprar {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilos específicos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenedor {
+        padding: 0 50px;
+        height: auto;
+    }
+
+    .titulo-logo {
+        font-size: 2rem;
+        bottom: 0;
+        position: static;
+    }
+
+    .navbar {
+        padding: 0 20px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-lista {
+        flex-direction: row;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
