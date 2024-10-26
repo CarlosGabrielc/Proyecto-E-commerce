@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-user">
+    <!-- <div class="emoji-rain"></div> Lluvia de emojis -->
+
+    <div class="login-container">
+        <div class="form-container" id="loginForm">
+            <h2 class="titulo-user">Iniciar Sesión</h2>
+            <input type="text" id="loginUser" placeholder="Usuario" required>
+            <input type="password" id="loginPassword" placeholder="Contraseña" required class="input-user">
+            <button onclick="login()" class="boton-user">Ingresar</button>
+            <p>¿No tienes cuenta? <span onclick="toggleForm()">Regístrate aquí</span></p>
+            <p id="loginMessage" class="message"></p> <!-- Mensaje de error para login -->
+        </div>
+
+        <div class="form-container hidden" id="registerForm">
+            <h2 class="titulo-user">Registro</h2>
+            <input type="text" id="registerUser" placeholder="Usuario" required>
+            <input type="email" id="registerEmail" placeholder="Correo electrónico" required>
+            <input type="password" id="registerPassword" placeholder="Contraseña" required>
+            <button onclick="register()">Registrarse</button>
+            <p>¿Ya tienes cuenta? <span onclick="toggleForm()">Inicia sesión aquí</span></p>
+            <p id="registerMessage" class="message"></p> <!-- Mensaje de éxito o error para registro -->
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

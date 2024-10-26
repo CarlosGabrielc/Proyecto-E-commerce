@@ -1,3 +1,73 @@
+/* Estilos pagina_usuario.html */
+.body-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.titulo-user {
+    margin-bottom: 1rem;
+}
+
+.input-user {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.boton-user {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton-user:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+.message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+.hidden {
+    display: none;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -201,8 +271,8 @@ main {
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: rgb(100, 46, 226);
-color: rgb(255, 203, 255);
+background-color: rgb(242, 172, 172);
+color: rgb(0, 0, 0);
 padding: .5rem;
 padding-right: 1.5rem;
 border-radius: 1rem;
@@ -218,7 +288,7 @@ border-radius: 1rem;
     cursor: pointer;
     border: 0;
     background-color: transparent;
-    color: rgb(241, 19, 19);
+    color: rgb(0, 0, 0);
 }
 .carrito-accion{
     display: flex;
@@ -227,7 +297,7 @@ border-radius: 1rem;
 .carrito-vaciar{
     cursor: pointer;
     border: 0;
-    background-color: rgb(100, 46, 226);
+    background-color: rgb(81, 80, 82);
     padding: 1rem;
     border-radius: 1rem;
     color: black;
@@ -240,7 +310,7 @@ border-radius: 1rem;
     display: flex;
     
     border: 0;
-    background-color: gray;
+    background-color: rgb(38, 143, 85);
     padding: 1rem;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -254,7 +324,7 @@ border-radius: 1rem;
 .accion-comprar{
     cursor: pointer;
     border: 0;
-    background-color: rgb(100, 46, 226);
+    background-color: rgb(134, 134, 134);
     padding: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
