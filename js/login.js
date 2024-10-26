@@ -64,7 +64,7 @@ function login() {
 
         // Redirigir después de un breve retraso
         setTimeout(() => {
-            window.location.href = "./pages/index.html"; // Redirige a la página principal
+            window.location.href = "index.html"; // Redirige a la página principal
         }, 1500);
     } else {
         loginMessage.innerText = "Usuario o contraseña incorrectos.";
