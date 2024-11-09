@@ -1,117 +1,273 @@
-/* Mi pagina es un ecomerce de venta de ropa, quiero que cuando el usuario ingrese se le de una bienvenida con su nombre y que cuando seleccione un articulo ese articulo valla al carrito de compras, luego si quiere realizar la compra el usuario decida como quiere pagar si con tarjeta debito,credito o efectivo etc. */
+// En script.js
+window.onload = function () {
+    const storedUserData = JSON.parse(localStorage.getItem("userData"));
+    alert(`Bienvenido, ${storedUserData.user} a Toda Las Pilchas!`);
+};
 
+const productos = [
+    //camperas
+    {
+        id: "campera-1",
+        titulo: "Campera nevada TNF",
+        imagen: "../imagenes-ropa-proyecto/camperas/campera-1.jpg",
+        categoria: {
+            nombre: "Camperas",
+            id: "camperas"
+        },
+        precio: 78999
+    },
+    {
+        id: "campera-2",
+        titulo: "Campera corderito TNF",
+        imagen: "../imagenes-ropa-proyecto/camperas/campera-2.jpg",
+        categoria: {
+            nombre: "Camperas",
+            id: "camperas"
+        },
+        precio: 85999
+    },
+    {
+        id: "campera-3",
+        titulo: "Campera crema TNF",
+        imagen: "../imagenes-ropa-proyecto/camperas/campera-3.jpeg",
+        categoria: {
+            nombre: "Camperas",
+            id: "camperas"
+        },
+        precio: 78999
+    },
+    {
+        id: "campera-4",
+        titulo: "Buzo Nike",
+        imagen: "../imagenes-ropa-proyecto/camperas/campera-4.webp",
+        categoria: {
+            nombre: "Camperas",
+            id: "camperas"
+        },
+        precio: 55000
+    },
+    {
+        id: "campera-5",
+        titulo: "Buzo Adidas",
+        imagen: "../imagenes-ropa-proyecto/camperas/campera-5.webp",
+        categoria: {
+            nombre: "Camperas",
+            id: "camperas"
+        },
+        precio: 52000
+    },
+    {
+        id: "campera-6",
+        titulo: "Rompevientos nike",
+        imagen: "../imagenes-ropa-proyecto/camperas/campera-6.png",
+        categoria: {
+            nombre: "Camperas",
+            id: "camperas"
+        },
+        precio: 45500
+    },
+    {
+        id: "campera-7",
+        titulo: "Rompevientos nike negra",
+        imagen: "../imagenes-ropa-proyecto/camperas/campera-7.jpg",
+        categoria: {
+            nombre: "Camperas",
+            id: "camperas"
+        },
+        precio: 59999
+    },
+    //JEANS
+    {
+        id: "jean-1",
+        titulo: "Jean cargo de mujer",
+        imagen: "../imagenes-ropa-proyecto/jeans/jean-cargo-1.jfif",
+        categoria: {
+            nombre: "Jeans",
+            id: "jeans"
+        },
+        precio: 32500
+    },
+    {
+        id: "jean-2",
+        titulo: "Jean cargo de mujer negro",
+        imagen: "../imagenes-ropa-proyecto/jeans/jean-cargo-2.jpg",
+        categoria: {
+            nombre: "Jeans",
+            id: "jeans"
+        },
+        precio: 34000
+    },
+    {
+        id: "jean-3",
+        titulo: "Jean cargo mom de mujer Negro ",
+        imagen: "../imagenes-ropa-proyecto/jeans/jean-cargo-3.jpg",
+        categoria: {
+            nombre: "Jeans",
+            id: "jeans"
+        },
+        precio: 33999
+    },
+    {
+        id: "jean-4",
+        titulo: "Jean cargo mom de hombre Negro",
+        imagen: "../imagenes-ropa-proyecto/jeans/jean-cargoH-1.jpg",
+        categoria: {
+            nombre: "Jeans",
+            id: "jeans"
+        },
+        precio: 32900
+    },
+    {
+        id: "jean-5",
+        titulo: "Jean cargo mom de hombre Negro con hilos ",
+        imagen: "../imagenes-ropa-proyecto/jeans/jean-cargoH-2.jpg",
+        categoria: {
+            nombre: "Jeans",
+            id: "jeans"
+        },
+        precio: 33999
+    },
+    {
+        id: "jean-6",
+        titulo: "Jean cago de hombre Verde",
+        imagen: "../imagenes-ropa-proyecto/jeans/jean-cargoH-3.jpg",
+        categoria: {
+            nombre: "Jeans",
+            id: "jeans"
+        },
+        precio: 30000
+    },
 
+    //REMERAS
+    {
+        id: "remera-1",
+        titulo: "Remera oversize 444 Rosa",
+        imagen: "../imagenes-ropa-proyecto/remerasOversize/remera-overH-1.jpg",
+        categoria: {
+            nombre: "Remeras",
+            id: "remeras"
+        },
+        precio: 14000
+    },
+    {
+        id: "remera-2",
+        titulo: "Remera oversize 444 Verde",
+        imagen: "../imagenes-ropa-proyecto/remerasOversize/remera-overH-2.jpg",
+        categoria: {
+            nombre: "Remeras",
+            id: "remeras"
+        },
+        precio: 14000
+    },
+    {
+        id: "remera-3",
+        titulo: "Remera oversize 999 Verde",
+        imagen: "../imagenes-ropa-proyecto/remerasOversize/remera-overH-3.jpg",
+        categoria: {
+            nombre: "Remeras",
+            id: "remeras"
+        },
+        precio: 14000
+    },
+    {
+        id: "remera-4",
+        titulo: "Remera oversize Negro",
+        imagen: "../imagenes-ropa-proyecto/remerasOversize/remera-overH-4.jpg",
+        categoria: {
+            nombre: "Remeras",
+            id: "remeras"
+        },
+        precio: 12000
+    },
 
-/* Como primer entrega solo voy a poner el precio de 3 remeras 4 jeans y 3 buzos para simular la compra */
-let menuPrincipal;
-let compraTotal = 0;
-let nombreUsuario = "";
+    {
+        id: "remera-5",
+        titulo: "Remera oversize kritical Negro",
+        imagen: "../imagenes-ropa-proyecto/remerasOversize/remera-overH-5.jpg",
+        categoria: {
+            nombre: "Remeras",
+            id: "remeras"
+        },
+        precio: 13000
+    },
+    {
+        id: "remera-6",
+        titulo: "Remera oversize japan Blanco",
+        imagen: "../imagenes-ropa-proyecto/remerasOversize/remera-overM-6.jpeg",
+        categoria: {
+            nombre: "Remeras",
+            id: "remeras"
+        },
+        precio: 15000
+    },
+    //Zapatillas
 
-
-//Entro y pido el nombre del usuario
-function pedirNombre() {
-    nombreUsuario = prompt("Bienvenido a todaLasPilchasOk, Por favor, ingrese su nombre");
-}
-//Luego de pedir el nombre darle la bienvenida le muestro el menu, intento hacer el menu con una funcion para ejemplificar codigo
-
-//Funcion muestro el menu pricipal
-function verMenuPrincipal() {
-    menuPrincipal = prompt("Hola " + nombreUsuario + " ,Bienvenido a nuestro menu" + "\n" +
-        "1) Para navegar por la pagina." + "\n" +
-        "2) Para comprar " + "\n" +
-        "3) Total de la compra" + "\n" +
-        "4) Para salir");
-    return menuPrincipal;
-}
-//Luego de mostrar el menu si el usuario pide comprar le muestro un pequeño catalogo de ropa
-//Funcion mostrar catalogo
-function mostrarCatalogo() {
-    return parseInt(prompt("Aquí te dejamos nuestro catálogo seleccione lo que desea comprar: " + "\n" +
-        "Remeras" + "\n" +
-        "1) Remera Oversize rosa = $14.000" + "\n" +
-        "2) Remera Overrsize verde agua = $14.000" + "\n" +
-        "3) Remera Oversize verde = $14.000" +
-        "Jeans" + "\n" +
-        "4) Jean cargo hombre = $32.900" + "\n" +
-        "5) Jean cargo mom mujer = $33.999" + "\n" +
-        "Zapatillas" + "\n" +
-        "6) Nike AirMax negras = $125.000" + "\n" +
-        "7) Nike AirMax 97 negras-reflex = $200.000" + "\n" +
-        "8) Adidas campus verdes = $138.000"));
-}
-
-//funcion para sumar compras
-function sumaCompras(opcionCompra) {
-    switch (opcionCompra) {
-        case 1:
-        case 2:
-        case 3:
-            compraTotal += 14000;
-            break;
-        case 4:
-            compraTotal += 32900;
-            break;
-        case 5:
-            compraTotal += 33999;
-            break;
-        case 6:
-            compraTotal += 125000;
-            break;
-        case 7:
-            compraTotal += 200000;
-            break;
-        case 8:
-            compraTotal += 138000;
-            break;
-        default:
-            break;
+    {
+        id: "zapatilla-1",
+        titulo: "Zapatillas nike AirMax Negro",
+        imagen: "../imagenes-ropa-proyecto/zapatillas/zapatillas-1.jpg",
+        categoria: {
+            nombre: "Zapatillas",
+            id: "zapatillas"
+        },
+        precio: 125000
+    },
+    {
+        id: "zapatilla-2",
+        titulo: "Zapatillas nike AirMax 97",
+        imagen: "../imagenes-ropa-proyecto/zapatillas/zapatillas-2.jpg",
+        categoria: {
+            nombre: "Zapatillas",
+            id: "zapatillas"
+        },
+        precio: 200000
+    },
+    {
+        id: "zapatilla-3",
+        titulo: "Zapatillas adidas Campus negro",
+        imagen: "../imagenes-ropa-proyecto/zapatillas/zapatillas-3.jpeg",
+        categoria: {
+            nombre: "Zapatillas",
+            id: "zapatillas"
+        },
+        precio: 119999
+    },
+    {
+        id: "zapatilla-4",
+        titulo: "Zapatillas adidas All Stars Blancas ",
+        imagen: "../imagenes-ropa-proyecto/zapatillas/zapatillas-4.jfif",
+        categoria: {
+            nombre: "Zapatillas",
+            id: "zapatillas"
+        },
+        precio: 99999
     }
+];
 
-    console.log("Compra actualizazda: $"+compraTotal);
-    
+
+const contedorProductos = document.querySelector("#contendor-productos");
+
+function cargarProductos() {
+    productos.forEach(producto => {
+        const div = document.createElement("div");
+        div.classList.add("productos");
+        div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt=""${producto.titulo}>
+            <div class="producto-detalles">
+            <h3 class="titulo-producto">${producto.titulo}</h3> 
+            <p class="precio-producto">$${producto.precio}</p>
+            <button class="agregar-producto" id="${producto.id}">Agregar al carrito</button>
+            </div>
+        `
+            })
+            contenedorProductos.append(div)
 }
-//funcion para manejar las compras
-function manejoDeCompras() {
-    let seguir = true;
-    while (seguir) {
-        let opcionCompra = parseInt(mostrarCatalogo());
 
-        //valido el dato ingresado        
-        if (isNaN(opcionCompra) || opcionCompra < 1 || opcionCompra > 8) {
-            alert("Por favor, ingrese un número válido entre 1 y 8");
-            continue;
-        }
-
-        sumaCompras(opcionCompra);
-
-        let salir = prompt("¿Desea comprar algo más? (SI o NO)").toUpperCase();
-        if (salir === "NO") {
-            seguir = false;
-        }
-
-    }
-}
-//bucle principal
-pedirNombre();
-do {
-    verMenuPrincipal();
-    switch (menuPrincipal) {
-        case "1":
-            alert(nombreUsuario + " aqui tienes la paagina de todaLasPilchasOK para que puedas verla y navegar por sus difetentes pestañas, si quieres volver a interactuar solo recarga la pagina ");
-            break;
-        case "2":
-            manejoDeCompras();
-            break;
-        case "3":
-            alert("Su compra es de: $" + compraTotal);
-            console.log("mostrar el total: $"+compraTotal);
-            
-            break;
-
-        case "4":
-            alert("Hasta luego " + nombreUsuario + " !");
-            break;
-        default:
-            alert("Ingrese un numero entre 1 y 4, la opcion que ingreso es invalida");
-    }
-} while (menuPrincipal !== "4");
+/* <div class="productos">
+                <img class="producto-imagen" src="../imagenes-ropa-proyecto/camperas/campera-1.jpg" alt="">
+                <div class="producto-detalles">
+                    <h3 class="titulo-producto">Campera nevada TNF</h3>
+                    <p class="precio-producto">$78999</p>
+                    <button class="agregar-producto">Agregar al carrito</button>
+                </div>
+            </div> */

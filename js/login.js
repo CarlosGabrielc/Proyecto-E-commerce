@@ -61,6 +61,7 @@ function login() {
     if (user === storedUserData.user && password === storedUserData.password) {
         loginMessage.innerText = "Inicio de sesión exitoso. Redirigiendo...";
         loginMessage.style.color = "green";
+        
 
         // Redirigir después de un breve retraso
         setTimeout(() => {
